@@ -1,6 +1,14 @@
 SCContracts::Application.routes.draw do
   resources :contracts
 
+  get '/contracts/:id/addlunch',  to: 'contracts#addlunch',  as: 'addlunch'
+  get '/contracts/:id/adddinner', to: 'contracts#adddinner', as: 'adddinner'
+  get '/contracts/:id/remlunch',  to: 'contracts#remlunch', as: 'remlunch'
+  get '/contracts/:id/remdinner', to: 'contracts#remdinner', as: 'remdinner'
+
+
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

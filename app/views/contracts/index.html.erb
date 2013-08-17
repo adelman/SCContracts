@@ -18,7 +18,11 @@
         <td><%= contract.name %></td>
         <td><%= contract.lunches %></td>
         <td><%= contract.dinners %></td>
-        <td><%= link_to 'Show', contract %></td>
+        <td><%= link_to 'Add Lunch', addlunch_path(contract) %></td>
+        <td><%= link_to 'Add Dinner', adddinner_path(contract) %></td>
+        <td><%= link_to 'Remove Lunch', remlunch_path(contract) %></td>
+        <td><%= link_to 'Remove Dinner', remdinner_path(contract) %></td>
+        <td></td>
         <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
         <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
