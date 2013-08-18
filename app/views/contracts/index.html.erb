@@ -1,11 +1,16 @@
 <h1>Listing contracts</h1>
 
-<table>
+<hr/>
+
+<table rules="cols">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Lunches</th>
-      <th>Dinners</th>
+      <th> Lunches </th>
+      <th> Dinners </th>
+      <th></th>
+      <th></th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,13 +27,15 @@
         <td><%= link_to 'Add Dinner', adddinner_path(contract) %></td>
         <td><%= link_to 'Remove Lunch', remlunch_path(contract) %></td>
         <td><%= link_to 'Remove Dinner', remdinner_path(contract) %></td>
-        <td></td>
         <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
-        <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', contract, method: :delete, data: 
+            { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<hr />
 
 <br>
 
