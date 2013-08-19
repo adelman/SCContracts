@@ -18,6 +18,8 @@
   </thead>
 
   <tbody>
+    <!-- Alphabetize! -->
+    <% @contracts.sort_by!{ |m| m.name.downcase } %>
     <% @contracts.each do |contract| %>
       <tr>
         <% if contract.lunches <= 1 || contract.dinners <= 1 %>
