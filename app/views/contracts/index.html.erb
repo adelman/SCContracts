@@ -20,7 +20,13 @@
   <tbody>
     <% @contracts.each do |contract| %>
       <tr>
-        <td><%= contract.name %></td>
+        <% if contract.lunches <= 1 || contract.dinners <= 1 %>
+          <td class="red"><%= contract.name %></td>
+        <% elsif contract.lunches <= 10 || contract.dinners <= 10 %>
+          <td class="yellow"><%= contract.name %></td>
+        <% else %>
+          <td><%= contract.name %></td>
+        <% end %>
         <td><%= contract.lunches %></td>
         <td><%= contract.dinners %></td>
         <td><%= link_to 'Add Lunch', addlunch_path(contract) %></td>
