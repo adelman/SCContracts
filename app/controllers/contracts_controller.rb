@@ -27,7 +27,7 @@ class ContractsController < ApplicationController
 
     @contract.lunches += 1
     @contract.save
-    redirect_to root_path
+    redirect_to contracts_path
   end
 
   def adddinner
